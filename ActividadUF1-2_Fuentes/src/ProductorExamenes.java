@@ -17,11 +17,10 @@ public class ProductorExamenes implements Runnable {
     public ProductorExamenes(BufferExamenes buffer) {
         // Se incrementa el contador de exámenes (variable numeroExamen).
         numeroExamen++;
-        // Establece el valor de la propiedad buffer
+        // Se construye el hilo y se le pone el nombre de "E" + nr correspondiente de examen
+        hilo = new Thread(this, "E" + numeroExamen);
+        // Se establece el valor de la propiedad buffer
         this.buffer = buffer;
-        // Se construye el hilo y se le pone el nombre de "E" + nr correspondiente de examen + "-" + año actual
-        hilo = new Thread(this, "E" + numeroExamen + "-" + LocalDateTime.now().getYear());
-        // ⬆️❓Puedo poner directamente aquí el guion y el año?
         // Se inicia el hilo
         hilo.start();
     }
@@ -30,7 +29,7 @@ public class ProductorExamenes implements Runnable {
     public void run() {
         // Variable de tipo integer aa para obtener el año actual
         int aa = LocalDateTime.now().getYear();
-        // Generación del código de examen.
+        // Generación del código de examen. Se añade el año aquí porque nos interesa cuando se ejecuta el hilo, no cuando se crea.
         String codigo = this.hilo.getName() + "-" +aa;
 
         // Se añade el nuevo código al buffer de exámenes.
@@ -38,7 +37,6 @@ public class ProductorExamenes implements Runnable {
 
         // Muestra un mensaje en consola informando sobre el código del examen que se acaba de producir.
         System.out.println("Se ha generado con éxito el código " + codigo + ".");
-
     }
 
 }

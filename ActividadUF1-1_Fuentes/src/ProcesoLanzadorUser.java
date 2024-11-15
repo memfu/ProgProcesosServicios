@@ -39,9 +39,9 @@ public class ProcesoLanzadorUser {
                 ProcessBuilder proceso = new ProcessBuilder("java", "-cp", classpath, "Triangulo", String.valueOf(i));
                 // Redirige la salida a un fichero .txt ubicado dentro de la carpeta "ficheros"
                 proceso.redirectOutput(new File(directorio, "triangulo" + i + ".txt"));
-                // En caso de haber errores, redirige los errores al mismo fichero
-                proceso.redirectErrorStream(true);
-                // Inicia proceso
+                // En caso de haber errores, redirige los errores a otro fichero
+                proceso.redirectError(new File(directorio, "error" + i + ".txt"));
+                // Inicia proceso y manda mensaje informativo por consola
                 proceso.start();
                 System.out.println("Iniciado el proceso para el triángulo con " + i + " filas.");
 

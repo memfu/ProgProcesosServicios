@@ -3,7 +3,10 @@ import java.io.IOException;
 
 public class ProcesoLanzadorDefault {
 
-    // Al ejecutar un programa, Java necesita saber dónde están las clases que la aplicación usa. Por eso necesito definir la classpath.
+    /*
+    Al ejecutar un programa, Java necesita saber dónde están las clases que la aplicación usa.
+    Por eso necesito definir la classpath. Esto pasa principalmente por IntelliJ
+     */
     static String classpath = System.getProperty("java.class.path");
 
     public void lanzarTriangulo () {
@@ -17,18 +20,23 @@ public class ProcesoLanzadorDefault {
         ProcessBuilder triangulo7 = new ProcessBuilder("java", "-cp", classpath, "Triangulo", "7");
         ProcessBuilder triangulo9 = new ProcessBuilder("java", "-cp", classpath, "Triangulo", "9");
 
-        // Redirijo las salidas a un fichero .txt
+        // Redirijo las salidas a un fichero .txt por triángulo
         triangulo5.redirectOutput(new File(directorio,"triangulo5.txt"));
         triangulo7.redirectOutput(new File(directorio,"triangulo7.txt"));
         triangulo9.redirectOutput(new File(directorio,"triangulo9.txt"));
 
-        // En caso de haber errores, redirijo los errores al mismo fichero
-        triangulo5.redirectErrorStream(true);
-        triangulo7.redirectErrorStream(true);
-        triangulo9.redirectErrorStream(true);
+        // En caso de haber errores, redirijo los errores a un nuevo fichero diferente por triángulo
+        triangulo5.redirectError(new File(directorio, "error5.txt"));
+        triangulo7.redirectError(new File(directorio, "error7.txt"));
+        triangulo9.redirectError(new File(directorio, "error9.txt"));
 
         try {
-            // Inicio los procesos con mensaje por consola
+
+            /*
+             Inicio los procesos con mensaje por consola. Como tiene que ser un lanzamiento simultaneo, no
+             necesito el .waitfor()
+             */
+
             triangulo5.start();
             System.out.println("Iniciado el proceso para el triángulo con 5 filas.");
 

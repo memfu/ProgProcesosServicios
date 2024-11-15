@@ -16,17 +16,21 @@ public class BufferExamenes {
         colaExamenes = new LinkedList<String>();
     }
 
+    // "synchronized" para que solo un hilo pueda acceder al método cada vez
     public synchronized void fabricarNuevoExamen(String codigo) {
     /*
-    Aquí se fabrica un nuevo examen.
-    Un hilo de la clase ProductorExamenes se encargará de fabricarlo y pasarlo como argumento a este método.
-    Añade el código pasado como argumento a la cola y libera el hilo que está intentando consumir un nuevo examen.
+    Aquí se fabrica un nuevo examen: un hilo de la clase ProductorExamenes se encarga de
+    fabricarlo y pasarlo como argumento a este método
      */
         colaExamenes.add(codigo);
         notify();
-
+        /*
+        Se añade el código pasado como argumento a la cola y libera el hilo que está intentando
+        consumir un nuevo examen mediante el "notify()"
+         */
     }
 
+    // "synchronized" para que solo un hilo pueda acceder al método cada vez
     public synchronized String consumirExamen() {
         // Este método se encarga de suministrar un examen a cada hilo de tipo Examinador que lo solicite.
         int esperas = 0;
@@ -45,18 +49,20 @@ public class BufferExamenes {
                  */
                 wait(1000);
             } catch (InterruptedException e) {
-                System.out.println("Se ha producido un error: " + e.getMessage());            }
+                System.out.println("Se ha producido un error: " + e.getMessage());
+            }
         }
 
-        // Si la cola de exámenes ya NO está vacía
-        if (!colaExamenes.isEmpty()) {
-            // Saca un examen y lo entrega como retorno de esta función
+        if (esperas < 10) {
+            // Si el nr de esperas es menor que 10, saca un examen y lo entrega como retorno de esta función
             String examen = colaExamenes.remove();
             return examen;
         } else {
+            /*
+             Si pasadas 10 repeticiones sigue la lista vacía, se deja de esperar a que se fabriquen
+             más exámenes y se finaliza el método consumirExamen devolviendo un null
+             */
             return null;
         }
-
     }
-
 }
