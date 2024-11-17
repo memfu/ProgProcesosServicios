@@ -2,7 +2,6 @@ import dao.ProductoDao;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class HiloEscuchador implements Runnable {
     private Thread hilo;
@@ -40,7 +39,7 @@ public class HiloEscuchador implements Runnable {
 
                 if (codigoProducto == null || codigoProducto.trim().equalsIgnoreCase("FIN")) {
                     writer.write("Hasta pronto, gracias por establecer conexión");
-                    writer.flush(); // Aseguramos que los datos se envíen
+                    writer.flush(); // Aseguro que los datos se envíen
                     break;
                 }
                 System.out.println("Cliente busca la fruta con el código: " + codigoProducto);
@@ -48,8 +47,8 @@ public class HiloEscuchador implements Runnable {
                 // Busca el producto y lo guarda en un String "respuesta"
                 String respuesta = frutaDao.getFruit(codigoProducto.trim());
                 System.out.println("Respuesta del servidor: " + respuesta);
-                writer.write(respuesta + "\n"); // Responde al cliente
-                writer.flush(); // Aseguramos que los datos se envíen
+                writer.write(respuesta + "\n"); // Responde al cliente con la respuesta
+                writer.flush(); // Aseguro que los datos se envíen
             }
 
             // Se cierran los flujos de entrada, salida y la conexión del socket del cliente

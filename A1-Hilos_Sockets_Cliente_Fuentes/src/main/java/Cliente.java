@@ -28,6 +28,7 @@ public class Cliente {
             System.out.println("Ya está conectado al servidor en 192.168.1.107:8080");
 
             // Crear flujos para enviar y recibir datos
+            // Los Buffered van mejor para el texto. Los de bytes daban muchos problemas
             entradaServidor = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
             salidaServidor = new PrintWriter(cliente.getOutputStream(), true);
 
@@ -57,7 +58,7 @@ public class Cliente {
                             if (scanner.hasNextFloat()) {
                                 precio = scanner.nextFloat();
                                 scanner.nextLine(); // Limpia el buffer
-                                // Validar que el precio sea positivo
+                                // Valida que el precio sea positivo
                                 if (precio > 0) {
                                     break;  // Sale del bucle si el precio es válido y positivo
                                 } else {

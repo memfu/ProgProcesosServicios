@@ -5,52 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f76b914-1a4f-4abf-b50e-bc75889fd23e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ClienteSinConsola.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/HiloEscuchador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/dao/ProductoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/model/Producto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Cliente_Socketstream_Complex/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Cliente_Socketstream_Complex/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Cliente_Socketstream_Complex/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Cliente_Socketstream_Complex/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Cliente_Socketstream_Complex/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Cliente_Socketstream_Complex/src/main/java/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Servidor_Socketstream_Complex/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Servidor_Socketstream_Complex/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Servidor_Socketstream_Complex/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Servidor_Socketstream_Complex/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Servidor_Socketstream_Complex/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/Servidor_Socketstream_Complex/src/main/java/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Cliente_SocketStream_Multihilo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Cliente_SocketStream_Multihilo/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Cliente_SocketStream_Multihilo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Cliente_SocketStream_Multihilo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Cliente_SocketStream_Multihilo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Cliente_SocketStream_Multihilo/src/main/java/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Servidor_Socketstream_Multihilo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Servidor_Socketstream_Multihilo/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Servidor_Socketstream_Multihilo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Servidor_Socketstream_Multihilo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Servidor_Socketstream_Multihilo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Servidor_Socketstream_Multihilo/src/main/java/HiloEscuchador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/Servidor_Socketstream_Multihilo/src/main/java/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/Cliente_Socketstream_Simple/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/Cliente_Socketstream_Simple/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/Cliente_Socketstream_Simple/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/Servidor_Socketstream_Simple/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/Servidor_Socketstream_Simple/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1-Hilos_Sockets_Cliente_Fuentes/src/main/java/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1-Hilos_Sockets_Cliente_Fuentes/src/main/java/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/HiloCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/resources/HiloCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/dao/GestorLibros.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/dao/GestorLibros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/model/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../A1-Hilos_Sockets_Servidor_Fuentes/src/main/java/model/Libro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ClienteSinConsola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClienteSinConsola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/HiloEscuchador.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/HiloEscuchador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/src/main/java/Servidor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +62,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/maria/Desktop/UNIR DAM/03-PSP/ProgProcesosServicios/ActividadUF2-1_ClienteSocket_Fruteria_Fuentes"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

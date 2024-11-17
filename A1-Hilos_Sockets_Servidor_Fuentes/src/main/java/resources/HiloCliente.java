@@ -1,3 +1,5 @@
+package resources;
+
 import dao.GestorLibros;
 
 import java.io.*;
@@ -25,23 +27,24 @@ public class HiloCliente implements Runnable {
             InputStream entrada = socketCliente.getInputStream();
             OutputStream salida = socketCliente.getOutputStream();
             // Como daba problemas con la lectura de bytes, he optado por usar el BufferedReader y el BufferedWriter
-            BufferedReader reader = new BufferedReader(new InputStreamReader(entrada)); // Usar BufferedReader para leer el código del producto
+            BufferedReader reader = new BufferedReader(new InputStreamReader(entrada)); // BufferedReader para leer el código del producto
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(salida)); // Para escribir respuestas correctamente
 
              String mensaje;
              // Bucle para recibir mensajes del cliente y enviar respuestas
             while (true) {
                 System.out.println("Esperando la petición del cliente..."); // Log para ver si el servidor está esperando
-                mensaje = reader.readLine(); // Leer mensaje del cliente
+                mensaje = reader.readLine(); // Lee mensaje del cliente
 
                 if (mensaje == null || mensaje.equals("6")) {
                     System.out.println("Conexión cerrada por el cliente.");
                     writer.write("Hasta pronto, gracias por establecer conexión");
-                    writer.flush(); // Aseguramos que los datos se envíen
+                    writer.flush(); // Aseguro que los datos se envíen
                     break;
                 }
 
                 System.out.println("Mensaje del cliente: " + mensaje);
+                // Divide el mensaje separándolo por comas para coger lo necesario en cada variable
                 String accion = mensaje.split(",")[0];
                 String respuesta = "";
                 try {

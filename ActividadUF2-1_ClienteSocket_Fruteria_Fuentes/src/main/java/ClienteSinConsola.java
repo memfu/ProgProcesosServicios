@@ -8,21 +8,19 @@ public class ClienteSinConsola {
             BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
 
-            // Enviar código de producto
             writer.println("PL"); // Envía el código del producto
 
-            // Leer la respuesta del servidor
+            // Lee la respuesta del servidor
             String respuesta = reader.readLine();
             System.out.println("Respuesta del servidor: " + respuesta);
 
-            // Enviar "FIN" para cerrar la conexión
-            writer.println("FIN");
+            writer.println("FIN"); // Envía "FIN" para cerrar la conexión
 
-            // Leer la respuesta final
+            // Lee la respuesta final
             respuesta = reader.readLine();
             System.out.println("Respuesta del servidor: " + respuesta);
 
-            // Cerrar conexiones
+            // Cierra conexiones
             reader.close();
             writer.close();
             socket.close();

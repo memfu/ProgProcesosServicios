@@ -16,15 +16,13 @@ public class Libro  implements Serializable {
     private String ISBN, titulo, autor;
     private float precio;
 
-    // Constructor sin ISBN para que se cree automáticamente
-    public Libro(String titulo, String autor, float precio) {
-        this.titulo = titulo;
-        this.autor = autor;
-        this.precio = precio;
-    }
-
     @Override
     public String toString() {
+        /*
+         Aquí tampoco fue posible poner un salto de línea al final, porque no se mostraba de forma correcta
+         en la consola del cliente
+         */
+
         return "* ISBN " + ISBN + " - \"" + titulo + "\" de " + autor + " (" + precio + " EUR)";
     }
 }

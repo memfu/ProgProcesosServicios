@@ -51,10 +51,11 @@ public class GestorLibros {
     public synchronized String getBook(String campo, String valor) {
         campo = campo.toLowerCase();
         /*
-        Para el caso de que haya un autor con varios libros,
-        usamos StringBuilder para almacenar todos los libros encontrados
+        Para el append() final no he usado un salto de línea porque al cliente solo le salía la primera
+        y el resto se quedaba en el buffer, por lo que los siguientes peticiones del cliente no se respondían
+        de forma correcta
          */
-        StringBuilder respuesta = new StringBuilder();
+        StringBuilder respuesta = new StringBuilder(); // StringBuilder para almacenar todos los libros encontrados
         boolean encontrado = false; // Variable para saber si el libro fue encontrado
 
         for (Libro book : biblioteca) {

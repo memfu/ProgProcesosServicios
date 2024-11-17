@@ -28,9 +28,9 @@ public class Cliente {
                         "Escriba FIN para terminar la aplicación: ");
                 texto = scanner.nextLine(); // Recoge el mensaje por consola del cliente
                 // Lo envía al servidor
-                writer.println(texto); // Usamos println para enviar el texto con salto de línea
+                writer.println(texto); // println para enviar el texto con salto de línea
 
-                // Parte para la respuesta del servidor
+                // Respuesta del servidor
                 System.out.println("Esperando respuesta del servidor...");
                 String respuesta = reader.readLine();
                 System.out.println("Servidor responde: " + respuesta);
