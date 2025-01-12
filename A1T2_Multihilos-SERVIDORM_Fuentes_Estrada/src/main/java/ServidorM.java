@@ -9,14 +9,14 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 public class ServidorM {
 
     public static final int TIEMPO_LIMITE = 120; // Tiempo límite en segundos
-    private static final Queue<HiloEscuchador> cola = new ConcurrentLinkedQueue<>();
+    static final Queue<HiloEscuchador> cola = new ConcurrentLinkedQueue<>();
 
     public static void main(String[] args) {
         System.out.println("APLICACIÓN DE SERVIDOR MULTITAREA");
         System.out.println("----------------------------------");
         try {
             ServerSocket servidor = new ServerSocket();
-            InetSocketAddress direccion = new InetSocketAddress("localhost",2001);  //ojo el puerto
+            InetSocketAddress direccion = new InetSocketAddress("192.168.1.107",2001);  //ojo el puerto
             servidor.bind(direccion);
             System.out.println("Servidor listo para aceptar solicitudes");
             System.out.println("Dirección IP: " + direccion.getAddress());

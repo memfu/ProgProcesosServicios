@@ -33,10 +33,10 @@ public class HiloEscuchador implements Runnable {
             long tiempoInicio = System.currentTimeMillis();
             String texto = "";
             while (!texto.trim().equals("FIN")) {
-//                if (!turno) {
-//                    Thread.sleep(1000);
-//                    continue;
-//                }
+                if (!turno) {
+                    Thread.sleep(1000);
+                    continue;
+                }
 
                 long tiempoTranscurrido = (System.currentTimeMillis() - tiempoInicio) / 1000;
                 if (tiempoTranscurrido >= ServidorM.TIEMPO_LIMITE) {
@@ -47,10 +47,10 @@ public class HiloEscuchador implements Runnable {
                 byte[] mensaje = new byte[100];
                 entrada.read(mensaje);
                 texto = new String(mensaje).trim();  //  AÑADE .trim();
-                if (texto.trim().equals("FIN")) {
+                if (texto.trim().equalsIgnoreCase("FIN")) {
                     salida.write("Hasta pronto, gracias por establecer conexión".getBytes());
                     System.out.println(hilo.getName()+" ha cerrado la comunicación");
-                } else if ("comprar".equalsIgnoreCase(texto)) {
+                } else if (texto.trim().equalsIgnoreCase("comprar")) {
                     sendMessage("Compra realizada con éxito! Desconectando...\n");
                     break;
                 } else {
@@ -60,9 +60,25 @@ public class HiloEscuchador implements Runnable {
             entrada.close();
             salida.close();
             enchufeAlCliente.close();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
+        } catch (IOException | InterruptedException e) {
+            System.out.println("Error en la conexión con el cliente: " + e.getMessage());
+        } finally {
+            try {
+                enchufeAlCliente.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            synchronized (ServidorM.cola) {
+                ServidorM.cola.poll();
+                if (!ServidorM.cola.isEmpty()) {
+                    ServidorM.cola.peek().notifyTurn();
+                }
+            }
+
+            System.out.println("Cliente desconectado: " + enchufeAlCliente.getInetAddress());
         }
+
     }
 
     private void sendMessage(String message) {

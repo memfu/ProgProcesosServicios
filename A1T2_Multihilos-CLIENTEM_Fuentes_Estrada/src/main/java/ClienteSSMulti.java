@@ -12,7 +12,7 @@ public class ClienteSSMulti {
         Scanner lector = new Scanner(System.in);
         try {
             Socket cliente = new Socket();
-            InetSocketAddress direccionServidor = new InetSocketAddress("localhost",2001);
+            InetSocketAddress direccionServidor = new InetSocketAddress("192.168.1.107",2001);
             System.out.println("Esperando a que el servidor acepte la conexión");
             cliente.connect(direccionServidor);
             System.out.println("Comunicación establecida con el servidor");
