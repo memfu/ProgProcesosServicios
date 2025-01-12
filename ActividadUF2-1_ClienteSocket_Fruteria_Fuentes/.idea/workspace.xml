@@ -5,48 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f76b914-1a4f-4abf-b50e-bc75889fd23e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/BufferColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/ConsumidorColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/HolaMundo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/Lanzador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/LanzadorHolaMundo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/LanzadorHolaMundo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/ProductorColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Examen_Martin-Fuentes_Maria-Eugenia/src/main/java/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/SocketStreamComplex.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/SocketStreamComplex_Multithread.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamComplex_Multithread/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/SocketStreamSimple.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SocketStreamSimple/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ActividadUF2-1_ServidorSocket_Fruteria_Fuentes/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
