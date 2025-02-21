@@ -19,43 +19,25 @@ public class ConstelacionRMI extends UnicastRemoteObject implements Constelacion
         constelaciones.add(new Constelacion("Géminis", "Destaca por sus dos gemelos, las estrellas Cástor y Pólux."));
     }
     @Override
-    public String buscarTitulo(String titulo) throws RemoteException {
+    public String buscarNombre(String nombre) throws RemoteException {
         String resultado = "";
-        for (Cancion c : canciones) {
-            if (c.getTitulo().contains(titulo)) {
+        for (Constelacion c : constelaciones) {
+            if (c.getNombre().contains(nombre)) {
                 resultado = resultado + c + "\n";
             }
         }
         return resultado;
     }
+
     @Override
-    public String buscarBanda(String banda) throws RemoteException {
+    public String buscarObservaciones(String observaciones) throws RemoteException {
         String resultado = "";
-        for (Cancion c : canciones) {
-            if (c.getBanda().contains(banda)) {
+        for (Constelacion c : constelaciones) {
+            if (c.getObservaciones().contains(observaciones)) {
                 resultado = resultado + c + "\n";
             }
         }
         return resultado;
     }
-    @Override
-    public String buscarAlbum(String album) throws RemoteException {
-        String resultado = "";
-        for (Cancion c : canciones) {
-            if (c.getAlbum().contains(album)) {
-                resultado = resultado + c + "\n";
-            }
-        }
-        return resultado;
-    }
-    @Override
-    public String buscarProducido(int a) throws RemoteException {
-        String resultado = "";
-        for (Cancion c : canciones) {
-            if (c.getProducido() == a) {
-                resultado = resultado + c + "\n";
-            }
-        }
-        return resultado;
-    }
+
 }
