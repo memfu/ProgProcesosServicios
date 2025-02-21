@@ -24,5 +24,7 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
         descubridores.add(new Descubridor("Claudio Ptolomeo", "Grecia", 150, constelacionRMI.constelaciones.get(10))); // Géminis
     }
 
+    
+
 
 }

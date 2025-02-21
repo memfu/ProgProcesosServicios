@@ -1,12 +1,6 @@
 
-import java.rmi.RemoteException;
-
-public interface DescubridorInterfaceRMI {
-}
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-
 public interface DescubridorInterfaceRMI extends Remote {
 
     public String buscarNombre(String nombre) throws RemoteException;
