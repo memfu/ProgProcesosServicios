@@ -27,21 +27,47 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
 
     @Override
     public String buscarNombre(String nombre) throws RemoteException {
-        return "";
+        String resultado = "";
+        for (Descubridor c : descubridores) {
+            if (c.getNombre().contains(nombre)) {
+                resultado = resultado + c + "\n";
+            }
+        }
+        return resultado;
     }
 
     @Override
     public String buscarNacionalidad(String nacionalidad) throws RemoteException {
-        return "";
+        String resultado = "";
+        for (Descubridor c : descubridores) {
+            if (c.getNacionalidad().contains(nacionalidad)) {
+                resultado = resultado + c + "\n";
+            }
+        }
+        return resultado;
     }
 
     @Override
     public String buscarYear(int year) throws RemoteException {
-        return "";
+        String resultado = "";
+        for (Descubridor c : descubridores) {
+            if (c.getYearDiscover() == year) {
+                resultado = resultado + c + "\n";
+            }
+        }
+        return resultado;
     }
 
     @Override
-    public Constelacion buscarConstelacion(Constelacion constelacion) throws RemoteException {
-        return null;
+    public String buscarConstelacion(String constelacion) throws RemoteException {
+        String resultado = "";
+        for (Descubridor c : descubridores) {
+            if (c.getConstelacion().equals(constelacionRMI.buscarNombre(constelacion)) ) {
+                resultado = resultado + c + "\n";
+            }
+        }
+        return resultado;
     }
+
+
 }

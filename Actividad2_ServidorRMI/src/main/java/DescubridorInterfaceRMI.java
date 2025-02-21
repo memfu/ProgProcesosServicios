@@ -1,6 +1,7 @@
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+
 public interface DescubridorInterfaceRMI extends Remote {
 
     public String buscarNombre(String nombre) throws RemoteException;
@@ -8,7 +9,7 @@ public interface DescubridorInterfaceRMI extends Remote {
 
     public String buscarYear(int year) throws RemoteException;
 
-    public Constelacion buscarConstelacion(Constelacion constelacion) throws RemoteException;
+    public String buscarConstelacion(String constelacion) throws RemoteException;
 
 }
 
