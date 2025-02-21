@@ -19,10 +19,10 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
         descubridores.add(bayer);
         descubridores.add(corsali);
     }
-    //Comentario
+    //Comentario2
     // Agregar los descubridores a la lista
 
     //Comentario de Maria
-
+    //comentario Javier
 
 }
