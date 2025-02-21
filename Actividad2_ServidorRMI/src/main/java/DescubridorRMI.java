@@ -30,7 +30,6 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
         String resultado = "";
         for (Descubridor c : descubridores) {
             if (c.getNombre().contains(nombre)) {
-
                 resultado = resultado + c + "\n";
             }
         }
@@ -42,7 +41,6 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
         String resultado = "";
         for (Descubridor c : descubridores) {
             if (c.getNacionalidad().contains(nacionalidad)) {
-
                 resultado = resultado + c + "\n";
             }
         }
@@ -54,7 +52,6 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
         String resultado = "";
         for (Descubridor c : descubridores) {
             if (c.getYearDiscover() == year) {
-
                 resultado = resultado + c + "\n";
             }
         }
@@ -66,12 +63,11 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
         String resultado = "";
         for (Descubridor c : descubridores) {
             if (c.getConstelacion().equals(constelacionRMI.buscarNombre(constelacion)) ) {
-
                 resultado = resultado + c + "\n";
             }
         }
         return resultado;
     }
-    }
 
 
+}
