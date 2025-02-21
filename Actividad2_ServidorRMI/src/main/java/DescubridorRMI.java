@@ -6,10 +6,13 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
     private static final long serialVersionUID = -20250221L;
     private ArrayList<Descubridor> descubridores;
 
+    ConstelacionRMI constelacionRMI;
+
+
     public DescubridorRMI() throws RemoteException {
 
         // Creación de los descubridores
-        Descubridor ptolomeo = new Descubridor("Claudio Ptolomeo", "Grecia", 150);
+        Descubridor ptolomeo = new Descubridor("Claudio Ptolomeo", "Grecia", 150, constelacionRMI.);
         Descubridor babilonios = new Descubridor("Babilonios", "Mesopotamia", -1000);
         Descubridor bayer = new Descubridor("Johann Bayer", "Alemania", 1603);
         Descubridor corsali = new Descubridor("Andreas Corsali", "Italia", 1515);
