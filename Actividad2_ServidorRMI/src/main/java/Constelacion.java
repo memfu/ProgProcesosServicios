@@ -11,6 +11,7 @@ public class Constelacion {
     private String nombre;
     private String observaciones;
 
+
     @Override
     public String toString() {
         return "Constelación: " + nombre + " - " + observaciones;

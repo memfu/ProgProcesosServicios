@@ -23,6 +23,7 @@ public class ConstelacionRMI extends UnicastRemoteObject implements Constelacion
         String resultado = "";
         for (Constelacion c : constelaciones) {
             if (c.getNombre().contains(nombre)) {
+
                 resultado = resultado + c + "\n";
             }
         }
