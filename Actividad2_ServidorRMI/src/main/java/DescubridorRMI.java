@@ -61,9 +61,9 @@ public class DescubridorRMI extends UnicastRemoteObject implements DescubridorIn
     @Override
     public String buscarConstelacion(String constelacion) throws RemoteException {
         String resultado = "";
-        for (Descubridor c : descubridores) {
-            if (c.getConstelacion().equals(constelacionRMI.buscarNombre(constelacion)) ) {
-                resultado = resultado + c + "\n";
+        for (Descubridor d : descubridores) {
+            if (d.getConstelacion().equals(constelacionRMI.buscarNombre(constelacion)) ) {
+                resultado = d.toString() + "\n";
             }
         }
         return resultado;
