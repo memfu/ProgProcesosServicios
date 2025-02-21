@@ -16,6 +16,7 @@ public class ClienteConstelacionRMI {
             System.out.println("Hemos obtenido el registro");
             //stub a partir del identificador del objeto suministrado en el programa servidor
             ConstelacionInterfaceRMI constelaciones = (ConstelacionInterfaceRMI) registry.lookup("misConstelaciones");
+            DescubridorInterfaceRMI descubridores = (DescubridorInterfaceRMI) registry.lookup("misDescubridores");
             System.out.println("Hemos obtenido el objeto remoto");
             System.out.println(); // Retorno de carro.
             String buscado;
@@ -23,28 +24,43 @@ public class ClienteConstelacionRMI {
             do {
                 escribirMenu();
                 opcion = lector.nextLine().toUpperCase();
+                if (opcion.equals("C")) {
+                    escribirMenuC();
+                    opcion = opcion + lector.nextLine().toUpperCase();
+                } else if (opcion.equals("D")) {
+                    escribirMenuD();
+                    opcion = opcion + lector.nextLine().toUpperCase();
+                }
                 switch (opcion) {
-                    case "T":
-                        System.out.println("Escribe título canción: ");
+                    case "CN":
+                        System.out.println("Escribe el nombre de la constelación: ");
                         buscado = lector.nextLine();
-                        System.out.println(canciones.buscarTitulo(buscado));
+                        System.out.println(constelaciones.buscarNombre(buscado));
                         break;
-                    case "B":
-                        System.out.println("Escribe nombre banda: ");
+                    case "CO":
+                        System.out.println("Escribe la observación: ");
                         buscado = lector.nextLine();
-                        System.out.println(canciones.buscarBanda(buscado));
+                        System.out.println(constelaciones.buscarObservaciones(buscado));
                         break;
-                    case "A":
-                        System.out.println("Escribe nombre álbum: ");
+                    case "DN":
+                        System.out.println("Escribe el nombre del descubridor: ");
                         buscado = lector.nextLine();
-                        System.out.println(canciones.buscarAlbum(buscado));
+                        System.out.println(descubridores.buscarNombre(buscado));
                         break;
-                    case "P":
-                        System.out.println("Escribe año de producción: ");
+                    case "DNac":
+                        System.out.println("Escribe la nacionalidad del descubridor: ");
+                        buscado = lector.nextLine();
+                        System.out.println(descubridores.buscarNacionalidad(buscado));
+                    case "DA":
+                        System.out.println("Escribe el año del descubrimiento: ");
                         buscado = lector.nextLine();
                         int a = Integer.parseInt(buscado);
-                        System.out.println(canciones.buscarProducido(a));
+                        System.out.println(descubridores.buscarYear(a));
                         break;
+                    case "DC":
+                        System.out.println("Escribe la constelación del descubridor: ");
+                        buscado = lector.nextLine();
+                        System.out.println(descubridores.buscarConstelacion(buscado));
                     case "F":
                         System.out.println("Programa finalizado");
                         break;
@@ -59,14 +75,38 @@ public class ClienteConstelacionRMI {
     }
     private static void escribirMenu() {
         System.out.println();
-        System.out.println("Búsqueda de canciones");
+        System.out.println("Constelaciones y descubridores");
         System.out.println("--------------------------");
-        System.out.println("T = Título");
-        System.out.println("B = Banda");
-        System.out.println("A = Álbum");
-        System.out.println("P = Año producción");
-        System.out.println("F = Terminar programa");
+        System.out.println("Indique sobre que quiere buscar: ");
+        System.out.println("C = Constelación");
+        System.out.println("D = Descubridor");
         System.out.println("--------------------------");
-        System.out.println("¿Qué opción eliges?");
+        System.out.println("¿Qué opción elige?");
+        System.out.println("Para finalizar el programa escriba \"F\"");
+    }
+    private static void escribirMenuC() {
+        System.out.println();
+        System.out.println("Constelaciones");
+        System.out.println("--------------------------");
+        System.out.println("Indique sobre que quiere buscar: ");
+        System.out.println("N = Nombre");
+        System.out.println("O = Observaciones");
+        System.out.println("--------------------------");
+        System.out.println("¿Qué opción elige?");
+        System.out.println("Para finalizar el programa escriba \"F\"");
+    }
+
+    private static void escribirMenuD() {
+        System.out.println();
+        System.out.println("Descubridores");
+        System.out.println("--------------------------");
+        System.out.println("Indique sobre que quiere buscar: ");
+        System.out.println("N = Nombre");
+        System.out.println("Nac = Nacionalidad");
+        System.out.println("A = Año del descubrimiento");
+        System.out.println("C = Constelación descubierta");
+        System.out.println("--------------------------");
+        System.out.println("¿Qué opción elige?");
+        System.out.println("Para finalizar el programa escriba \"F\"");
     }
 }
