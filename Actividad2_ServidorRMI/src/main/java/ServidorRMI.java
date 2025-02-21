@@ -18,10 +18,13 @@ public class ServidorRMI {
         try {
             // creamos registro de objetos remotos
             Registry registro = LocateRegistry.createRegistry(puerto);
+
             //crea un objeto
             ConstelacionRMI constelacionRMI = new ConstelacionRMI();
-            //Inscripción del stub en el registro y puesto a disposición de los clientes bajo el nombre "miMusica".
+            DescubridorRMI descubridorRMI = new DescubridorRMI();
+            //Inscripción del stub en el registro y puesto a disposición de los clientes bajo el nombre "miConstelacion" y "miDescubridor".
             registro.rebind("miConstelacion", constelacionRMI);
+            registro.rebind("miDescubridor", descubridorRMI);
             System.out.println("Servicio registrado en host " + host + " y puerto " + puerto);
         } catch (RemoteException e) {
             System.out.println("No se ha podido registrar el servicio");

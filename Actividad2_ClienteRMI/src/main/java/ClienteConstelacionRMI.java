@@ -15,8 +15,8 @@ public class ClienteConstelacionRMI {
             registry = LocateRegistry.getRegistry("localhost", 5055);
             System.out.println("Hemos obtenido el registro");
             //stub a partir del identificador del objeto suministrado en el programa servidor
-            ConstelacionInterfaceRMI constelaciones = (ConstelacionInterfaceRMI) registry.lookup("misConstelaciones");
-            DescubridorInterfaceRMI descubridores = (DescubridorInterfaceRMI) registry.lookup("misDescubridores");
+            ConstelacionInterfaceRMI constelaciones = (ConstelacionInterfaceRMI) registry.lookup("miConstelacion");
+            DescubridorInterfaceRMI descubridores = (DescubridorInterfaceRMI) registry.lookup("miDescubridor");
             System.out.println("Hemos obtenido el objeto remoto");
             System.out.println(); // Retorno de carro.
             String buscado;
@@ -30,6 +30,8 @@ public class ClienteConstelacionRMI {
                 } else if (opcion.equals("D")) {
                     escribirMenuD();
                     opcion = opcion + lector.nextLine().toUpperCase();
+                } else {
+                    System.out.println("Elija una opción correcta");
                 }
                 switch (opcion) {
                     case "CN":

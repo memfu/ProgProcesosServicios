@@ -5,11 +5,12 @@ import java.util.ArrayList;
 public class DescubridorRMI extends UnicastRemoteObject implements DescubridorInterfaceRMI{
     private static final long serialVersionUID = -20250221L;
     private ArrayList<Descubridor> descubridores;
-
-    ConstelacionRMI constelacionRMI ;
+    ConstelacionRMI constelacionRMI = new ConstelacionRMI();
 
 
     public DescubridorRMI() throws RemoteException {
+        this.constelacionRMI = constelacionRMI; // Inicializar la referencia
+        this.descubridores = new ArrayList<>();
 
         descubridores.add(new Descubridor("Claudio Ptolomeo", "Grecia", 150, constelacionRMI.constelaciones.get(0))); // Osa Mayor
         descubridores.add(new Descubridor("Claudio Ptolomeo", "Grecia", 150, constelacionRMI.constelaciones.get(1))); // Osa Menor
