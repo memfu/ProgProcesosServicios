@@ -6,9 +6,9 @@ public class ConstelacionRMI extends UnicastRemoteObject implements Constelacion
     private static final long serialVersionUID = -20250221L;
     private ArrayList<Constelacion> constelaciones;
     public ConstelacionRMI() throws RemoteException {
-        constelaciones.add(new Constelacion("Osa Mayor", "Se desplaza en círculos alrededor del polo norte."));
-        constelaciones.add(new Constelacion("Osa Menor", "Su estrella más conocida es la polar que se encuentra en la prolongación del eje de la tierra."));
-        constelaciones.add(new Constelacion("Tauro", "Una de las constelaciones más conocidas desde tiempos remotos."));
+        constelaciones.add(new Constelacion("Osa Mayor", "Se desplaza en círculos alrededor del polo norte.","a"));
+        constelaciones.add(new Constelacion("Osa Menor", "Su estrella más conocida es la polar que se encuentra en la prolongación del eje de la tierra.","a"));
+        constelaciones.add(new Constelacion("Tauro", "Una de las constelaciones más conocidas desde tiempos remotos.","a"));
         constelaciones.add(new Constelacion("Leo", "De las más brillantes del Zodíaco."));
         constelaciones.add(new Constelacion("Escorpio", "Sus estrellas forman un escorpión."));
         constelaciones.add(new Constelacion("Can Mayor", "Contiene la estrella Sirio, la más brillante en el cielo nocturno."));
@@ -18,6 +18,8 @@ public class ConstelacionRMI extends UnicastRemoteObject implements Constelacion
         constelaciones.add(new Constelacion("Acuario", "Una de las más antiguas. Incluye 56 estrellas."));
         constelaciones.add(new Constelacion("Géminis", "Destaca por sus dos gemelos, las estrellas Cástor y Pólux."));
     }
+
+
     @Override
     public String buscarTitulo(String titulo) throws RemoteException {
         String resultado = "";

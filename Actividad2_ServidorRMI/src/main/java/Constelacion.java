@@ -10,6 +10,7 @@ import lombok.Setter;
 public class Constelacion {
     private String nombre;
     private String observaciones;
+    private Descubridor descubridor;
 
 
     @Override
