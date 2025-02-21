@@ -8,6 +8,7 @@ public interface DescubridorInterfaceRMI extends Remote {
 
     public String buscarYear(int year) throws RemoteException;
 
-    public Constelacion buscarConstelacion(Constelacion constelacion) throws RemoteException;
+    public String buscarConstelacion(String constelacion) throws RemoteException;
 
 }
+

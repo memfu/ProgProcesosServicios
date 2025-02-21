@@ -10,8 +10,12 @@ import lombok.Setter;
 public class Constelacion {
     private String nombre;
     private String observaciones;
+    private Descubridor descubridor;
 
-
+    public Constelacion(String nombre, String observaciones) {
+        this.nombre = nombre;
+        this.observaciones = observaciones;
+    }
 
     @Override
     public String toString() {
