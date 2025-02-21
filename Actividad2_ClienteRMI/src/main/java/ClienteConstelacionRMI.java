@@ -12,10 +12,10 @@ public class ClienteConstelacionRMI {
             //objeto remoto,
             //obtener el acceso al registro de objetos remotos a través de la misma dirección IP y puerto suministrado
             //acordaos de cambiar la IP
-            registry = LocateRegistry.getRegistry("192.168.1.104", 5055);
+            registry = LocateRegistry.getRegistry("localhost", 5055);
             System.out.println("Hemos obtenido el registro");
             //stub a partir del identificador del objeto suministrado en el programa servidor
-            ConstelacionInterfaceRMI canciones = (ConstelacionInterfaceRMI) registry.lookup("miMusica");
+            ConstelacionInterfaceRMI constelaciones = (ConstelacionInterfaceRMI) registry.lookup("misConstelaciones");
             System.out.println("Hemos obtenido el objeto remoto");
             System.out.println(); // Retorno de carro.
             String buscado;
