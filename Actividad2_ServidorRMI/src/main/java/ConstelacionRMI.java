@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class ConstelacionRMI extends UnicastRemoteObject implements ConstelacionInterfaceRMI
 {
     private static final long serialVersionUID = -20250221L;
-    private ArrayList<Constelacion> constelaciones;
+    public ArrayList<Constelacion> constelaciones;
     public ConstelacionRMI() throws RemoteException {
         constelaciones.add(new Constelacion("Osa Mayor", "Se desplaza en círculos alrededor del polo norte."));
         constelaciones.add(new Constelacion("Osa Menor", "Su estrella más conocida es la polar que se encuentra en la prolongación del eje de la tierra."));
