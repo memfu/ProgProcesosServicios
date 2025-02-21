@@ -1,3 +1,9 @@
+
+import java.rmi.RemoteException;
+
+public interface DescubridorInterfaceRMI {
+}
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
@@ -11,3 +17,4 @@ public interface DescubridorInterfaceRMI extends Remote {
     public Constelacion buscarConstelacion(Constelacion constelacion) throws RemoteException;
 
 }
+
