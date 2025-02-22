@@ -32,5 +32,3 @@ public class ServidorRMI {
         }
     }
 }
-//  podriamos forzar el cierre
-//UnicastRemoteObject.unexportObject(musica, true);
