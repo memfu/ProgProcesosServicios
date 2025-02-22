@@ -6,6 +6,8 @@ public class ConstelacionRMI extends UnicastRemoteObject implements Constelacion
     private static final long serialVersionUID = -20250221L;
     public ArrayList<Constelacion> constelaciones;
     public ConstelacionRMI() throws RemoteException {
+        this.constelaciones = new ArrayList<>();
+
         constelaciones.add(new Constelacion("Osa Mayor", "Se desplaza en círculos alrededor del polo norte."));
         constelaciones.add(new Constelacion("Osa Menor", "Su estrella más conocida es la polar que se encuentra en la prolongación del eje de la tierra."));
         constelaciones.add(new Constelacion("Tauro", "Una de las constelaciones más conocidas desde tiempos remotos."));
@@ -23,18 +25,6 @@ public class ConstelacionRMI extends UnicastRemoteObject implements Constelacion
         String resultado = "";
         for (Constelacion c : constelaciones) {
             if (c.getNombre().contains(nombre)) {
-
-                resultado = resultado + c + "\n";
-            }
-        }
-        return resultado;
-    }
-
-    @Override
-    public String buscarObservaciones(String observaciones) throws RemoteException {
-        String resultado = "";
-        for (Constelacion c : constelaciones) {
-            if (c.getObservaciones().contains(observaciones)) {
                 resultado = resultado + c + "\n";
             }
         }
