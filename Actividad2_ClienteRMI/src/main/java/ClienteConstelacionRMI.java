@@ -7,6 +7,7 @@ public class ClienteConstelacionRMI {
     public static void main(String[] args) {
         Registry registry;
         Scanner lector = new Scanner(System.in);
+        Formato formato = null;
         try {
             //La parte importante del código, que permite al cliente obtener el stub para comunicarse con el
             //objeto remoto,
@@ -25,8 +26,7 @@ public class ClienteConstelacionRMI {
                 escribirMenu();
                 opcion = lector.nextLine().toUpperCase();
                 if (opcion.equals("C")) {
-                    escribirMenuC();
-                    opcion = opcion + lector.nextLine().toUpperCase();
+                    opcion = "CN";
                 } else if (opcion.equals("D")) {
                     escribirMenuD();
                     opcion = opcion + lector.nextLine().toUpperCase();
@@ -36,23 +36,19 @@ public class ClienteConstelacionRMI {
                 switch (opcion) {
                     case "CN":
                         System.out.println("Escribe el nombre de la constelación: ");
-                        buscado = lector.nextLine();
+                        buscado = formato.formatearNombre(lector.nextLine());
                         System.out.println(constelaciones.buscarNombre(buscado));
-                        break;
-                    case "CO":
-                        System.out.println("Escribe la observación: ");
-                        buscado = lector.nextLine();
-                        System.out.println(constelaciones.buscarObservaciones(buscado));
                         break;
                     case "DN":
                         System.out.println("Escribe el nombre del descubridor: ");
-                        buscado = lector.nextLine();
+                        buscado = formato.formatearNombre(lector.nextLine());
                         System.out.println(descubridores.buscarNombre(buscado));
                         break;
-                    case "DNac":
-                        System.out.println("Escribe la nacionalidad del descubridor: ");
-                        buscado = lector.nextLine();
+                    case "DNAC":
+                        System.out.println("Escribe el país de origen del descubridor: ");
+                        buscado = formato.formatearNombre(lector.nextLine());
                         System.out.println(descubridores.buscarNacionalidad(buscado));
+                        break;
                     case "DA":
                         System.out.println("Escribe el año del descubrimiento: ");
                         buscado = lector.nextLine();
@@ -61,8 +57,9 @@ public class ClienteConstelacionRMI {
                         break;
                     case "DC":
                         System.out.println("Escribe la constelación del descubridor: ");
-                        buscado = lector.nextLine();
+                        buscado = formato.formatearNombre(lector.nextLine());
                         System.out.println(descubridores.buscarConstelacion(buscado));
+                        break;
                     case "F":
                         System.out.println("Programa finalizado");
                         break;
@@ -82,17 +79,6 @@ public class ClienteConstelacionRMI {
         System.out.println("Indique sobre que quiere buscar: ");
         System.out.println("C = Constelación");
         System.out.println("D = Descubridor");
-        System.out.println("--------------------------");
-        System.out.println("¿Qué opción elige?");
-        System.out.println("Para finalizar el programa escriba \"F\"");
-    }
-    private static void escribirMenuC() {
-        System.out.println();
-        System.out.println("Constelaciones");
-        System.out.println("--------------------------");
-        System.out.println("Indique sobre que quiere buscar: ");
-        System.out.println("N = Nombre");
-        System.out.println("O = Observaciones");
         System.out.println("--------------------------");
         System.out.println("¿Qué opción elige?");
         System.out.println("Para finalizar el programa escriba \"F\"");

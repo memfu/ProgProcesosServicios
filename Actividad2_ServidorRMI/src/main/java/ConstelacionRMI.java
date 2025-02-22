@@ -31,15 +31,4 @@ public class ConstelacionRMI extends UnicastRemoteObject implements Constelacion
         return resultado;
     }
 
-    @Override
-    public String buscarObservaciones(String observaciones) throws RemoteException {
-        String resultado = "";
-        for (Constelacion c : constelaciones) {
-            if (c.getObservaciones().contains(observaciones)) {
-                resultado = resultado + c + "\n";
-            }
-        }
-        return resultado;
-    }
-
 }
