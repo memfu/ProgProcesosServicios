@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<grupo>
+    <persona idPersonaje="1">
+        <apellido>Simpson</apellido>
+        <edad>48</edad>
+        <nombre>Homer</nombre>
+        <ocupacion>Trabajador Central Nuclear</ocupacion>
+    </persona>
+    <persona idPersonaje="2">
+        <apellido>Simpson</apellido>
+        <edad>12</edad>
+        <nombre>Lisa</nombre>
+        <ocupacion>Estudiante sobresaliente</ocupacion>
+    </persona>
+    <persona idPersonaje="3">
+        <apellido>Simpson</apellido>
+        <edad>13</edad>
+        <nombre>Bart</nombre>
+        <ocupacion>Estudiante</ocupacion>
+    </persona>
+    <persona idPersonaje="4">
+        <apellido>Simpson</apellido>
+        <edad>40</edad>
+        <nombre>Marge</nombre>
+        <ocupacion>Ama de casa</ocupacion>
+    </persona>
+    <persona idPersonaje="4">
+        <apellido>Simpson</apellido>
+        <edad>1</edad>
+        <nombre>Maggie</nombre>
+        <ocupacion>Bebé</ocupacion>
+    </persona>
+</grupo>

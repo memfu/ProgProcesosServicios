@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personaje idPersonaje="1">
+    <apellido>Simpson</apellido>
+    <edad>48</edad>
+    <nombre>Homer</nombre>
+    <ocupacion>Trabajador Central Nuclear</ocupacion>
+</personaje>
